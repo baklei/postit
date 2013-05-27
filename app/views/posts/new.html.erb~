@@ -1,0 +1,31 @@
+<h3>Pure HTML form</h3>
+
+<form action="/posts" method="post">
+  Title: <input type="text" name="post[title]">
+  <br/>
+  Url: <input type="text" name="post[url]">
+  <br/>
+  <input type="submit" value="Create Post">
+  </form>
+  
+  <br/>
+  
+  <h3>Non-model backed form</h3>
+  
+  <%= form_tag posts_path do %>
+   <%= label_tag :title %>
+   <%= text_field_tag :title %>
+   <br/>
+   <%= label_tag :url, "URL" %>
+   <%= text_field_tag :url %>
+   <br/>
+   <%= label_tag :description %>
+   <%= text_field_tag :description %>
+   <br/>
+   <%= submit_tag "Create"%>
+  <% end %>
+  
+  <h3> Model backed forms</h3>
+  
+  
+  <%= render 'form' %>

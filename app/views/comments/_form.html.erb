@@ -1,0 +1,15 @@
+ <% if logged_in? %>
+ <%= form_for [@post, @comment] do |f| %>
+   <%= f.label :description %>
+   <%= f.text_area :description %>
+   <br/>
+   <%= f.submit "Create"%>
+  <% end %>
+<% end %>  
+       <ul>
+  <% @post.comments.each do |comment| %>
+    <li>
+    <%= comment.description %>
+    </li>
+  <% end %>
+</ul>
