@@ -1,13 +1,4 @@
 <h3>Comment on this post</h3>
-
- <%= form_tag post_comments_path do %>
- 
-    <%= label_tag :description %>
-   <%= text_field_tag :description %>
-   <br/>
-   <%= submit_tag "Create"%>
-  <% end %>
-  
   
    <%= render 'form' %>
    

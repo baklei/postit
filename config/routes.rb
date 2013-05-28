@@ -8,7 +8,13 @@ Postit::Application.routes.draw do
   #get '/register', to: 'users#new'
   
   resources :posts, :except => :destroy do
+    member do
+      post 'vote'
+    end
     resources :comments
+    member do
+      post 'vote'
+    end
   end
   
   resources :users, only: [:new,:create]

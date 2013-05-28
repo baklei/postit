@@ -1,13 +1,3 @@
-<h5>Welcome to the project template!</h5>
+<h5>Welcome to postit</h5>
 
-Here are all the posts:
-
-<ul>
-  <% @posts.each do |post| %>
-  <li>
-    <%= post.title %>
-    <%= link_to "(edit)", edit_post_path(post) %>
-    <%= link_to "(add comment)", new_post_comment_path(post.id) %>
-    </li>
-  <% end %>
-  </u1>
+<%= render @posts %>

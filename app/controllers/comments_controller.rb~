@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+  
+  before_filter :require_user, only: [:create]
+  
   def index
     @posts = Post.find(params[:post_id])
     @comments = @posts.comments

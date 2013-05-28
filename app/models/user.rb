@@ -4,8 +4,10 @@ class User < ActiveRecord::Base
     # 3. Rails gives us getter/setter methods on all attributes
   has_many :posts
   has_many :comments
+  has_many :votes
   #many to many
   # 1. has_many_belongs_to_many
   # 2. has_many :through
   has_secure_password
+  
 end
